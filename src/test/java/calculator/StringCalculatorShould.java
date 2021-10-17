@@ -19,5 +19,13 @@ class StringCalculatorShould {
     public void addTwoNumberIsSumOfNumbers() throws Exception {
         assertEquals(3, calculator.add("1,2"));
     }
-
+    @Test
+    public void addUnknownAmountOfNumber() throws Exception {
+        assertEquals(12, calculator.add("1,2,4,3,2"));
+    }
+	@Test
+	public void acceptNewlineAsValidDelimiter() throws Exception{
+		assertEquals(6, calculator.add("1\n2,3"));
+	}
+	
 }
